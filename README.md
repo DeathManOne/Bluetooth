@@ -72,12 +72,6 @@ setup() {
   int scanTime = 5; // in seconds
   BT_SCAN = new Bluetooth::scan(scanTime);
 }
-
-loop() {
-  BLEScanResults devices = scan->start();
-  for (int d = 0; d < devices.getCount(); d++)
-    { Serial.println(devices.getDevice(d).toString().c_str()); }
-}
 ```
 ### delete
 ```c++
@@ -92,6 +86,9 @@ _BT_SCAN->setCallbacksAdvertisedDevice(new BTCallbacks::advertisedDevice());
 ```
 #### start scanning
 ```c++
+BLEScanResults devices = scan->start();
+  for (int d = 0; d < devices.getCount(); d++)
+    { Serial.println(devices.getDevice(d).toString().c_str()); }
 ```
 #### clear result of scanning
 ```c++
@@ -103,6 +100,7 @@ this command clean result before stop it
 _BT_SCAN->stop();
 ```
 ## SERVER
+
 
 
 
