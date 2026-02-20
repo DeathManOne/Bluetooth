@@ -63,6 +63,46 @@ std::string data = "my favorite text";
 _BT_CLIENT->sendCommand(uuid, data)
 ```
 ## SCANNER
+### initialization
+```c++
+#include <BTScan.h>
+Bluetooth::scan *_BT_SCAN;
+
+setup() {
+  int scanTime = 5; // in seconds
+  BT_SCAN = new Bluetooth::scan(scanTime);
+}
+
+loop() {
+  BLEScanResults devices = scan->start();
+  for (int d = 0; d < devices.getCount(); d++)
+    { Serial.println(devices.getDevice(d).toString().c_str()); }
+}
+```
+### delete
+```c++
+delete _BT_SCAN;
+```
+### command
+#### sets callbacks
+```c++
+_BT_SCAN->setCallbacksPeriodicScan(new BTCallbacks::periodicScan());
+_BT_SCAN->setCallbacksExtAdvertising(new BTCallbacks::extAdvertising());
+_BT_SCAN->setCallbacksAdvertisedDevice(new BTCallbacks::advertisedDevice());
+```
+#### start scanning
+```c++
+```
+#### clear result of scanning
+```c++
+_BT_SCAN->clear();
+```
+#### stop scanning
+this command clean result before stop it
+```c++
+_BT_SCAN->stop();
+```
 ## SERVER
+
 
 
