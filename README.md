@@ -53,7 +53,7 @@ bool isConnected = _BT_CLIENT->isConnected();
 ```
 #### disconnect
 ```c++
-bool diconnected = BT_CLIENT->disconnect();
+bool diconnected = _BT_CLIENT->disconnect();
 ```
 #### send a command (or other)
 ```c++
@@ -64,4 +64,5 @@ _BT_CLIENT->sendCommand(uuid, data)
 ```
 ## SCANNER
 ## SERVER
+
 
