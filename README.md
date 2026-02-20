@@ -101,8 +101,4 @@ this command clean result before stop it
 _BT_SCAN->stop();
 ```
 ## SERVER
-
-
-
-
-
+See the following for generating UUIDs: https://www.uuidgenerator.net/
