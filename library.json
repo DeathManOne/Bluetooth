@@ -1,0 +1,14 @@
+{
+  "name": "Bluetooth BLE",
+  "version": "1.0.0",
+  "license": "Unlicense",
+  "keywords": "bluetooth, esp, arduino",
+  "description": "Read and write datas from bluetooth client and server, with scanner",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/DeathManOne/Bluetooth"
+  },
+  "frameworks": "arduino",
+  "platforms": ["espressif32"]
+}
