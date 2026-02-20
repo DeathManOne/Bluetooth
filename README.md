@@ -79,6 +79,7 @@ delete _BT_SCAN;
 ```
 ### command
 #### sets callbacks
+Sets them before to start to scan
 ```c++
 _BT_SCAN->setCallbacksPeriodicScan(new BTCallbacks::periodicScan());
 _BT_SCAN->setCallbacksExtAdvertising(new BTCallbacks::extAdvertising());
@@ -100,6 +101,7 @@ this command clean result before stop it
 _BT_SCAN->stop();
 ```
 ## SERVER
+
 
 
 
